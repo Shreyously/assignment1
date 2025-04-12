@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useCart } from "../context/CartContext";
 import { Button } from "@/components/ui/button";
 import { useRouter } from "next/navigation";
@@ -42,7 +42,10 @@ export default function CheckoutPage() {
   };
 
   if (state.items.length === 0) {
-    router.push("/cart");
+    // Use useEffect to handle client-side navigation
+    useEffect(() => {
+      router.push("/cart");
+    }, [router]);
     return null;
   }
 
