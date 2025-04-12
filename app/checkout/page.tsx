@@ -193,13 +193,13 @@ export default function CheckoutPage() {
                     <span>
                       {item.name} × {item.quantity}
                     </span>
-                    <span>₹{(item.price * item.quantity * 83).toFixed(2)}</span>
+                    <span>₹{(item.price * item.quantity * 33).toFixed(2)}</span>
                   </div>
                 ))}
                 <div className="border-t border-amber-100 pt-4">
                   <div className="flex justify-between text-amber-700">
                     <span>Subtotal</span>
-                    <span>₹{(state.total * 83).toFixed(2)}</span>
+                    <span>₹{(state.total * 33).toFixed(2)}</span>
                   </div>
                   <div className="flex justify-between text-amber-700">
                     <span>Shipping</span>
@@ -207,7 +207,7 @@ export default function CheckoutPage() {
                   </div>
                   <div className="flex justify-between font-semibold text-lg text-amber-900 mt-4">
                     <span>Total</span>
-                    <span>₹{(state.total * 83).toFixed(2)}</span>
+                    <span>₹{(state.total * 33).toFixed(2)}</span>
                   </div>
                 </div>
               </div>

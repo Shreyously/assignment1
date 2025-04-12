@@ -55,7 +55,7 @@ export default function CartPage() {
                     />
                     <div className="flex-1">
                       <h3 className="text-lg font-semibold text-amber-900">{item.name}</h3>
-                      <p className="text-amber-700">${item.price.toFixed(2)}</p>
+                      <p className="text-amber-700">₹{(item.price * 33).toFixed(2)}</p>
                       <div className="flex items-center gap-4 mt-2">
                         <div className="flex items-center gap-2">
                           <Button
@@ -85,7 +85,7 @@ export default function CartPage() {
                     </div>
                     <div className="text-right">
                       <p className="font-semibold text-amber-900">
-                        ${(item.price * item.quantity).toFixed(2)}
+                        ₹{(item.price * item.quantity * 33).toFixed(2)}
                       </p>
                     </div>
                   </div>
@@ -101,7 +101,7 @@ export default function CartPage() {
               <div className="space-y-4">
                 <div className="flex justify-between text-amber-700">
                   <span>Subtotal</span>
-                  <span>${state.total.toFixed(2)}</span>
+                  <span>₹{(state.total * 33).toFixed(2)}</span>
                 </div>
                 <div className="flex justify-between text-amber-700">
                   <span>Shipping</span>
@@ -110,7 +110,7 @@ export default function CartPage() {
                 <div className="border-t border-amber-100 pt-4">
                   <div className="flex justify-between font-semibold text-lg text-amber-900">
                     <span>Total</span>
-                    <span>${state.total.toFixed(2)}</span>
+                    <span>₹{(state.total * 33).toFixed(2)}</span>
                   </div>
                 </div>
                 <Button

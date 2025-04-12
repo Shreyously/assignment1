@@ -280,7 +280,7 @@ export default function Home() {
                     <h3 className="text-2xl font-semibold mb-2 text-amber-900">{product.name}</h3>
                     <p className="text-amber-700 mb-4">{product.description}</p>
                     <div className="flex items-center justify-between mb-6">
-                      <p className="text-2xl font-bold text-amber-900">${product.price}</p>
+                      <p className="text-2xl font-bold text-amber-900">₹{(product.price * 83).toFixed(2)}</p>
                       <div className="text-amber-600">Free Shipping</div>
                     </div>
                     <Button
