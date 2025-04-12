@@ -220,42 +220,42 @@ export default function Home() {
                 id: "1",
                 image: "https://www.mypoojabox.in/cdn/shop/products/DSC01453copy.jpg?v=1658750399",
                 name: "Classic Pure Copper Bottle",
-                price: 49.99,
+                price: 800,
                 description: "Sleek and minimalist design with a mirror finish"
               },
               {
                 id: "2",
                 image: "https://www.indianartvilla.in/cdn/shop/files/IAV-CC-7-140-1000A_25a11829-0712-4d39-ac59-780ddb91a34f_1024x1024.jpg?v=1742473622",
                 name: "Mandala Engraved Bottle",
-                price: 69.99,
+                price: 1200,
                 description: "Traditional patterns with modern elegance"
               },
               {
                 id: "3",
                 image: "https://peacoy.com/cdn/shop/files/46_18464e77-93b7-4618-a9f6-4ed56478e430.jpg?v=1693995694",
                 name: "Tropical Paradise Bottle",
-                price: 79.99,
+                price: 1500,
                 description: "Hand-painted with vibrant botanical designs"
               },
               {
                 id: "4",
                 image: "https://www.studiocoppre.com/cdn/shop/products/1BedsideCarafeandGlass_1_2048x2048.jpg?v=1740381804g",
                 name: "Ayurvedic Copper Bottle",
-                price: 52.99,
+                price: 1000,
                 description: "Infuses water with natural health benefits, perfect for daily use"
               },
               {
                 id: "5",
                 image: "https://m.media-amazon.com/images/I/51Pa-wt2j9L.jpg",
                 name: "Smooth Finish Copper Bottle",
-                price: 47.99,
+                price: 900,
                 description: "Polished copper with a clean, contemporary shape"
               },
               {
                 id: "6",
                 image: "https://ptal.in/cdn/shop/files/DSCF0183.jpg?v=1743599168&width=1080",
                 name: "Eco Copper Bottle",
-                price: 45.99,
+                price: 850,
                 description: "Eco-friendly, leak-proof, and great for everyday hydration"
               },
             ].map((product) => (
@@ -280,7 +280,7 @@ export default function Home() {
                     <h3 className="text-2xl font-semibold mb-2 text-amber-900">{product.name}</h3>
                     <p className="text-amber-700 mb-4">{product.description}</p>
                     <div className="flex items-center justify-between mb-6">
-                      <p className="text-2xl font-bold text-amber-900">₹{(product.price * 83).toFixed(2)}</p>
+                      <p className="text-2xl font-bold text-amber-900">₹{product.price.toFixed(2)}</p>
                       <div className="text-amber-600">Free Shipping</div>
                     </div>
                     <Button
