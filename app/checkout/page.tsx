@@ -19,6 +19,12 @@ export default function CheckoutPage() {
     pincode: "",
   });
 
+  useEffect(() => {
+    if (state.items.length === 0) {
+      router.push("/cart");
+    }
+  }, [state.items.length, router]);
+
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
     setFormData((prev) => ({
@@ -42,10 +48,6 @@ export default function CheckoutPage() {
   };
 
   if (state.items.length === 0) {
-    // Use useEffect to handle client-side navigation
-    useEffect(() => {
-      router.push("/cart");
-    }, [router]);
     return null;
   }
 
